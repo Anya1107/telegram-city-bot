@@ -37,7 +37,7 @@ public class CityController {
      * */
     @DeleteMapping("/delete")
     public ResponseEntity<?> delete(@RequestParam String name){
-        if(name.length() < 1){
+        if(name.length() < 1 || name.isBlank()){
             throw new InvalidNameException("Invalid name", name, "delete");
         }
         if(cityService.existCityByName(name)){
@@ -56,7 +56,7 @@ public class CityController {
      * */
     @PutMapping("/update")
     public ResponseEntity<?> update(@RequestParam String name, @RequestParam String newSight){
-        if(name.length() < 1){
+        if(name.length() < 1 || name.isBlank()){
             throw new InvalidNameException("Invalid name", name, "update");
         }
         if(newSight.length() < 1){
