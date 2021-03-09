@@ -41,6 +41,11 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
     }
 
+
+    /**
+     * Method for handling NotFoundException.
+     * @return the ResponseEntity object with a specific status.
+     * */
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Map<String, String>> methodArgumentNotValid(NotFoundException m){
         HashMap<String, String> map = new HashMap<>();
@@ -50,6 +55,11 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
     }
 
+
+    /**
+     * Method for handling IsExistException.
+     * @return the ResponseEntity object with a specific status.
+     * */
     @ExceptionHandler(IsExistException.class)
     public ResponseEntity<Map<String, String>> userIsExist(IsExistException u){
         HashMap<String, String> map = new HashMap<>();
@@ -59,6 +69,11 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
     }
 
+
+    /**
+     * Method for handling InvalidIdException.
+     * @return the ResponseEntity object with a specific status.
+     * */
     @ExceptionHandler(InvalidIdException.class)
     public ResponseEntity<Map<String, String>> invalidId(InvalidIdException exception){
         HashMap<String, String> map = new HashMap<>();
@@ -68,6 +83,11 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
     }
 
+
+    /**
+     * Method for handling InvalidNameException.
+     * @return the ResponseEntity object with a specific status.
+     * */
     @ExceptionHandler(InvalidNameException.class)
     public ResponseEntity<Map<String, String>> invalidTitle(InvalidNameException exception){
         HashMap<String, String> map = new HashMap<>();
