@@ -44,6 +44,7 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
 
     /**
      * Method for handling NotFoundException.
+     * @throws NotFoundException if the object is not found.
      * @return the ResponseEntity object with a specific status.
      * */
     @ExceptionHandler(NotFoundException.class)
@@ -58,6 +59,7 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
 
     /**
      * Method for handling IsExistException.
+     * @throws IsExistException if the object is exist.
      * @return the ResponseEntity object with a specific status.
      * */
     @ExceptionHandler(IsExistException.class)
@@ -72,6 +74,7 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
 
     /**
      * Method for handling InvalidIdException.
+     * @throws InvalidIdException if id is wrong.
      * @return the ResponseEntity object with a specific status.
      * */
     @ExceptionHandler(InvalidIdException.class)
@@ -86,6 +89,7 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
 
     /**
      * Method for handling InvalidNameException.
+     * @throws InvalidNameException if a name is wrong.
      * @return the ResponseEntity object with a specific status.
      * */
     @ExceptionHandler(InvalidNameException.class)
